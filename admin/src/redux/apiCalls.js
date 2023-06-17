@@ -24,6 +24,8 @@ export const login = async (dispatch, user) => {
     dispatch(loginFailure());
   }
 };
+
+// --------------------- Products ---------------------------
 // get products
 export const getProducts = async (dispatch) => {
   dispatch(getProductStart());

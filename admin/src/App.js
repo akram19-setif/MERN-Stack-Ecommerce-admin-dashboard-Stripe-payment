@@ -2,7 +2,12 @@ import Sidebar from "./components/sidebar/Sidebar";
 import Topbar from "./components/topbar/Topbar";
 import "./App.css";
 import Home from "./pages/home/Home";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 import UserList from "./pages/userList/UserList";
 import User from "./pages/user/User";
 import Login from "./pages/Login/Login";
@@ -13,8 +18,7 @@ import NewProduct from "./pages/newProduct/NewProduct";
 import { useDispatch, useSelector } from "react-redux";
 
 function App() {
-  // const { isAdmin } = useSelector((state) => state?.currentUser) || false;
-  const isAdmin = true;
+  const { isAdmin } = useSelector((state) => state?.user.currentUser) || false;
   return (
     <Router>
       {isAdmin ? (
@@ -52,14 +56,7 @@ function App() {
           </div>
         </>
       ) : (
-        <Switch>
-          <Route
-            exact
-            path='/login'
-          >
-            <Login />
-          </Route>
-        </Switch>
+        <Login />
       )}
     </Router>
   );

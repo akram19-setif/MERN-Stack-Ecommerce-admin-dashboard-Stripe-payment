@@ -1,7 +1,5 @@
-import React from "react";
-import axios from "axios";
-import { useDispatch, useSelector } from "react-redux";
 
+import axios from "axios";
 const BASE_URL = process.env.REACT_APP_BASE_API;
 
 function getTokenFromLocalStorage() {

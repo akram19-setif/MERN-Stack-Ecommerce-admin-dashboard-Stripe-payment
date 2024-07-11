@@ -21,7 +21,7 @@ function App() {
   const { isAdmin } = useSelector((state) => state?.user.currentUser) || false;
   return (
     <Router>
-      {false ? (
+      {isAdmin ? (
         <>
           {" "}
           <Topbar />

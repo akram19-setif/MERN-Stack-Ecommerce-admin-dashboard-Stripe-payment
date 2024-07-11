@@ -18,7 +18,7 @@ const Login = () => {
   };
 
   return (
-    <div className='container'>
+    <div className='container_login'>
       <div className='login-admin'>
         <form className='form'>
           <div className='input-group'>
@@ -49,11 +49,6 @@ const Login = () => {
               Login
             </button>
             <Link to={""}>DO NOT YOU REMEMBER THE PASSWORD?</Link>
-            <span className='or'>OR</span>
-            <span className="text_new_account">
-              don't have an account?
-              <Link  to={"/newUser"}> CREATE A NEW ACCOUNT</Link>
-            </span>
           </div>
         </form>
       </div>

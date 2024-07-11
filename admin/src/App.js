@@ -21,17 +21,14 @@ function App() {
   const { isAdmin } = useSelector((state) => state?.user.currentUser) || false;
   return (
     <Router>
-      {isAdmin ? (
+      {false ? (
         <>
           {" "}
           <Topbar />
           <div className='container'>
             <Sidebar />
             <Switch>
-              <Route
-                exact
-                path='/'
-              >
+              <Route exact path='/'>
                 <Home />
               </Route>
               <Route path='/users'>

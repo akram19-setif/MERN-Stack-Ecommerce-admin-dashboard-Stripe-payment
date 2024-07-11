@@ -95,10 +95,7 @@ const Login = () => {
             onChange={(e) => setUserPassword(e.target.value)}
             type='password'
           />
-          <Button
-            onClick={handleLogin}
-            disabled={isFetching}
-          >
+          <Button onClick={handleLogin} disabled={isFetching}>
             LOGIN
           </Button>
           {error && <P>your Name or Password is incorrect!</P>}

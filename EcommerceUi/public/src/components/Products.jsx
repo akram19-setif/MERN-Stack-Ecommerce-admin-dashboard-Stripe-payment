@@ -19,8 +19,8 @@ const Products = ({ cat, sort, filter }) => {
       const getProducts = async () => {
         const res = await axios.get(
           cat
-            ? `http://localhost:5000/api/products?category=${cat}`
-            : "http://localhost:5000/api/products/"
+            ? `${process.env.REACT_APP_BASE_API}/products?category=${cat}`
+            : `${process.env.REACT_APP_BASE_API}/products/`
         );
         setProducts(res.data);
       };
@@ -57,18 +57,10 @@ const Products = ({ cat, sort, filter }) => {
   return (
     <Container>
       {cat
-        ? filteredProducts.map((item) => (
-            <Product
-              item={item}
-              key={item.id}
-            />
-          ))
-        : products.slice(0, 8).map((item) => (
-            <Product
-              item={item}
-              key={item.id}
-            />
-          ))}
+        ? filteredProducts.map((item) => <Product item={item} key={item.id} />)
+        : products
+            .slice(0, 8)
+            .map((item) => <Product item={item} key={item.id} />)}
     </Container>
   );
 };

@@ -22,6 +22,7 @@ const Container = styled.div`
 const Wrapper = styled.div`
   width: 25%;
   padding: 20px;
+  border-radius: 10%;
   background-color: white;
   ${mobile({ width: "75%" })}
 `;
@@ -42,7 +43,8 @@ const Input = styled.input`
   min-width: 40%;
   margin: 10px 0;
   padding: 10px;
-  font-size: 18px;
+  font-size: 16px;
+  border-radius: 10px;
 `;
 
 const Button = styled.button`
@@ -53,11 +55,15 @@ const Button = styled.button`
   color: white;
   cursor: pointer;
   margin-bottom: 10px;
+  border-radius: 10px;
   &:disabled {
     color: white;
     background: gray;
     cursor: not-allowed;
   }
+    :hover {
+      background-color: #2c3e50;
+    } 
 `;
 
 const Link = styled.a`

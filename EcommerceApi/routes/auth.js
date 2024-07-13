@@ -11,6 +11,9 @@ route.post("/register", async (req, res) => {
     req.body.password,
     process.env.SEC_KEY
   ).toString();
+ 
+
+  
 
   const newUser = new User({
     username: req.body.username,

@@ -1,3 +1,10 @@
+.container_login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
 .login-admin {
   background: #fff;
   border-radius: 4px;
@@ -8,13 +15,18 @@
   text-align: center;
   width: 90%;
   margin: auto;
+  margin: auto;
   margin-top: 100px;
+  border-radius: 10%;
+}
+.text_new_account {
+  text-transform: uppercase;
 }
 .login-admin > .logo {
   max-width: 90%;
 }
 .login-admin > .form {
-  margin-bottom: 98px;
+  margin-bottom: 30px;
   margin-top: 41px;
 }
 .login-admin .input-group {
@@ -46,6 +58,7 @@
   outline: 0;
   padding: 0 15px;
   transition: all 0.3s;
+  border-radius: 10px;
 }
 .login-admin .input-group > input:focus {
   background: #fff;
@@ -82,4 +95,10 @@
 }
 .login-admin button.new-account:hover {
   background: #a8c787;
+}
+.login-btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
